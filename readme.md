@@ -46,13 +46,13 @@ Users progress through chapters, answer questions, earn experience points and ge
 ┌─────────────────────────────────────────────────────────────────┐
 │                        SkillPet AI                              │
 ├─────────────────────────┬───────────────────────────────────────┤
-│   Frontend (Next.js)    │   Backend (Strapi v5 CMS)            │
+│   Frontend (Next.js)    │   Backend (Strapi v5 CMS)             │
 ├─────────────────────────┼───────────────────────────────────────┤
-│  • User Interface       │  • Content Management                │
-│  • Auth (InsForge)      │  • REST API                          │
-│  • Gamification Logic   │  • Database (PostgreSQL / SQLite)    │
-│  • Progress Tracking    │  • Roles & Permissions               │
-│  • Dashboard & Charts   │  • File Uploads (Cloudinary)         │
+│  • User Interface       │  • Content Management                 │
+│  • Auth (InsForge)      │  • REST API                           │
+│  • Gamification Logic   │  • Database (PostgreSQL / SQLite)     │
+│  • Progress Tracking    │  • Roles & Permissions                │
+│  • Dashboard & Charts   │  • File Uploads (Cloudinary)          │
 └─────────────────────────┴───────────────────────────────────────┘
 ```
 
