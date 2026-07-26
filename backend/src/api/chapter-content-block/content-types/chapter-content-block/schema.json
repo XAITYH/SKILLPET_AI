@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "chapter_content_blocks",
+  "info": {
+    "singularName": "chapter-content-block",
+    "pluralName": "chapter-content-blocks",
+    "displayName": "Chapter Content Block",
+    "description": "Interactive learning content blocks within a chapter"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "type": {
+      "type": "enumeration",
+      "required": true,
+      "enum": [
+        "theory",
+        "code",
+        "fill-blank",
+        "multiple-choice",
+        "true-false",
+        "yes-no",
+        "matching"
+      ]
+    },
+    "content": {
+      "type": "json",
+      "required": true
+    },
+    "difficulty": {
+      "type": "enumeration",
+      "default": "easy",
+      "enum": ["easy", "medium", "hard"]
+    },
+    "hint": {
+      "type": "text"
+    },
+    "order": {
+      "type": "integer",
+      "default": 0,
+      "required": true
+    },
+    "chapter": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::chapter.chapter",
+      "inversedBy": "contentBlocks"
+    }
+  }
+}

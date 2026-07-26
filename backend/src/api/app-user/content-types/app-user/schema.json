@@ -1,0 +1,53 @@
+{
+  "kind": "collectionType",
+  "collectionName": "app_users",
+  "info": {
+    "singularName": "app-user",
+    "pluralName": "app-users",
+    "displayName": "app-user"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "insforgeUserId": {
+      "type": "string",
+      "unique": true
+    },
+    "email": {
+      "type": "email",
+      "unique": true
+    },
+    "displayName": {
+      "type": "string"
+    },
+    "avatarUrl": {
+      "type": "string"
+    },
+    "emailVerified": {
+      "type": "boolean"
+    },
+    "authProviders": {
+      "type": "json"
+    },
+    "metadata": {
+      "type": "json"
+    },
+    "lastAuthenticatedAt": {
+      "type": "datetime"
+    },
+    "characterFileName": {
+      "type": "string"
+    },
+    "characterName": {
+      "type": "string"
+    },
+    "user_progress": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::user-progress.user-progress",
+      "mappedBy": "app_user"
+    }
+  }
+}

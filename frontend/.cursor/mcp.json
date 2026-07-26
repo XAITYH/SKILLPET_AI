@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "strapi-mcp": {
+      "type": "streamable-http",
+      "url": "http://localhost:1337/mcp",
+      "headers": {
+        "Authorization": "Bearer b86e74f3df332273651aa4482ae8c8b68e14b72bfe163b3cadab4fb124d6e2963b41038bc8989b34c0326fdf05a17f5acfd5761769f76f17d6165dcaba2fc9605ad6f3f5627f800bda038e120b42291c721fe66ded31cc8168266464ad8bbecc6b895c962655f958789eff9ae506c6ee8113092cf1c2840a11f9a1ddf9d1a253"
+      }
+    }
+  }
+}

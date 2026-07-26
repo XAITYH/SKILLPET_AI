@@ -1,0 +1,44 @@
+{
+    "kind": "collectionType",
+    "collectionName": "chapters",
+    "info": {
+        "singularName": "chapter",
+        "pluralName": "chapters",
+        "displayName": "Chapter",
+        "description": "Chapters within a course"
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "title": {
+            "type": "string",
+            "required": true
+        },
+        "description": {
+            "type": "text"
+        },
+        "emoji": {
+            "type": "string",
+            "default": "📚"
+        },
+        "order": {
+            "type": "integer",
+            "default": 0,
+            "required": true
+        },
+        "course": {
+            "type": "relation",
+            "relation": "manyToOne",
+            "target": "api::course.course",
+            "inversedBy": "chapters"
+        },
+        "contentBlocks": {
+            "type": "relation",
+            "relation": "oneToMany",
+            "target": "api::chapter-content-block.chapter-content-block",
+            "mappedBy": "chapter"
+        }
+    }
+}

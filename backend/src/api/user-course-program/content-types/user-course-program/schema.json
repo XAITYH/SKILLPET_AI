@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_course_programs",
+  "info": {
+    "singularName": "user-course-program",
+    "pluralName": "user-course-programs",
+    "displayName": "User Course Program",
+    "description": "Tracks user progress in courses"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "appUser": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::app-user.app-user"
+    },
+    "course": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::course.course"
+    },
+    "progress": {
+      "type": "integer",
+      "default": 0,
+      "min": 0,
+      "max": 100
+    },
+    "completed": {
+      "type": "boolean",
+      "default": false
+    },
+    "startedAt": {
+      "type": "datetime"
+    },
+    "completedAt": {
+      "type": "datetime"
+    },
+    "lastAccessedAt": {
+      "type": "datetime"
+    }
+  }
+}

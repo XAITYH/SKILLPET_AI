@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_progresses",
+  "info": {
+    "singularName": "user-progress",
+    "pluralName": "user-progresses",
+    "displayName": "user-progress"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "courses": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::course.course"
+    },
+    "app_user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::app-user.app-user",
+      "inversedBy": "user_progress"
+    },
+    "completedChapters": {
+      "type": "json"
+    },
+    "gems": {
+      "type": "integer"
+    },
+    "hearts": {
+      "type": "integer"
+    },
+    "streakDays": {
+      "type": "integer"
+    },
+    "lastActive": {
+      "type": "datetime"
+    },
+    "lastStreak": {
+      "type": "string"
+    }
+  }
+}
